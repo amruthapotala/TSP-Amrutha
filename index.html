@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Showcase</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .heading-container {
+            background: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 20px 15% 20px 15%;
+        }
+
+        .Name {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 4px;
+            width: 150px;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .video-wrapper {
+            margin-bottom: 20px;
+        }
+
+        video {
+            border: 1px solid #3498db;
+            width: 70%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+        }
+
+        .stage-button {
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 50px;
+            background-color: #3498db;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .stage-button:hover {
+            background-color: #2980b9;
+        }
+
+        #displayed-image {
+            width: 60%;
+            height: auto;
+            object-fit: cover;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading-container">
+        <h1 class="heading-text">Traveling salesman problem</h1>
+    </div>
+    <div class="Name">
+        <p>P.Amrutha<br>VU21CSEN0101493</p>
+    </div>
+    <h3>The traveling salesman problem (TSP) asks the following question: <br>"Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?"</h3>
+    <div class="container">
+        <div class="video-wrapper">
+            <video controls>
+                <source src="amrutha.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="buttons">
+            <button class="stage-button" onclick="changeImage('image1.jpeg')">Stage 1</button>
+            <button class="stage-button" onclick="changeImage('image2.jpeg')">Stage 2</button>
+            <button class="stage-button" onclick="changeImage('image3.jpeg')">Stage 3</button>
+            <button class="stage-button" onclick="changeImage('image4.jpeg')">Stage 4</button>
+        </div>
+        <img id="displayed-image" src="image1.jpeg" alt="Image">
+    </div>
+
+    <script>
+        function changeImage(imageName) {
+            var displayedImage = document.getElementById('displayed-image');
+            displayedImage.src = imageName;
+        }
+    </script>
+</body>
+
+</html>
